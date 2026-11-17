@@ -1,6 +1,6 @@
 Name:		xepub
-Version:	1.0.3
-Release:	2
+Version:	1.0.4
+Release:	1
 Summary:	EPUB reader for the Linux desktop
 License:        GPL-3+
 URL:            https://github.com/xapp-project/xepub
@@ -32,7 +32,15 @@ EPUB reader for the Linux desktop
 %prep
 %autosetup -p1
 
-%files
+%build
+%meson_build
+ 
+%install
+%meson_install
+
+%find_lang %{name}
+
+%files -f %{name}.lang
 %license LICENSES/*
 %doc README.md
 %{_bindir}/xepub
