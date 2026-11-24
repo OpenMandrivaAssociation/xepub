@@ -1,5 +1,5 @@
 Name:		xepub
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 Summary:	EPUB reader for the Linux desktop
 License:        GPL-3+
